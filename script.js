@@ -109,6 +109,14 @@ function autoPlay() {
     }
 }
 
+function playWithComputer() {
+    if (autoPlaying) {
+        clearInterval(autoPlayID);
+        document.querySelector('.autoPlay').innerText = 'AutoPlay';
+        autoPlaying = false;
+    }
+}
+
 function updateScore() {
     document.querySelector('.win').innerText = score.win;
     document.querySelector('.loss').innerText = score.loss;
